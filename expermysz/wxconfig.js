@@ -58,7 +58,7 @@
     var title = "我的深圳"
     var desc = "五一活动"
     var link = window.location.href
-    var imgUrl = window.location.origin + '/activitys/logo_small.png'
+    var imgUrl = window.location.origin + '/expermysz/logo_small.png'
     wx.onMenuShareAppMessage({
         title: title, // 分享标题
         desc: desc, // 分享描述
