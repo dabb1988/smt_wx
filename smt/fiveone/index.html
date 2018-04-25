@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- <html manifest="fiveone.appcache"> -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' www.sz.gov.cn 'unsafe-inline' 'unsafe-eval'"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=yes">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="我的深圳，是平安集团打造的市民服务平台，针对市民的办事难、审批难、跑腿多、材料多等突出问题，基于平安大数据、云计算、AI、生物特征识别等前沿技术，整合政府公共资源，为市民提供政务、生活、医疗、养老、交通、咨询等服务，使市民足不出户，即可随时随地享受优质、便捷、高效的政务民生服务，打造覆盖政务民生的一站式智能服务平台。">
+  <meta name="keywords" content="深圳,我的深圳,下载,深圳通,市民通">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta property="og:image" content="../download/logo.png" /> -->
+  <link rel="shortcut icon" href="./favicon.ico">
+  <!-- <link rel="manifest" href="fiveone.manifes">  -->
+  <!-- 禁止横屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <title>我的深圳</title>
+  <link rel="stylesheet" type="text/css"  href="./css/index.css" />
+  <!-- <link rel="stylesheet" type="text/css"  href="./css/swiper.min.css" /> -->
+  <!-- <script>
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (!isAndroid && !isiOS) {
+      var origin = location.origin;
+      window.location = origin + '/smt/downloadapp/web/downloadweb.html'
+    }
+  </script> -->
+  <!-- <script src="./js/swiper.min.js"></script> -->
+  <!-- <script src="./js/swiper.animate1.0.3.min.js"></script> -->
+   <script src="/smt/js/qrcode.min.js" ></script>  
+  <!-- <script src="../../js/jquery.min.js"></script> -->
+  <!-- <script src="../axios.min.js" charset="utf-8"></script> -->
+  <script src="/smt/js/statistics.js"></script>
+</head>
+
+<body>
+  <!-- <div style="display:none"><img src="/smt/images/common/ios_logo_300.png" /></div>  -->
+  <div class="img-list">
+    <img class="img lazyload" src="./images/placeholder.png" data-src="./images/1.png" />
+    <div style="position:relative">
+      <div class="canvas" id="qrcode"></div>
+      <img class="img lazyload" src="./images/placeholder.png" data-src="./images/2.png" />
+      <i id="small_logo"></i>
+    </div>
+    <img class="img lazyload" src="./images/placeholder.png" data-src="./images/3.png" />
+    <img class="img lazyload" src="./images/placeholder.png" data-src="./images/4.png" id="btn" />
+    <img class="img lazyload" src="./images/placeholder.png" data-src="./images/5.png" />
+    <!-- <img class="img lazyload" src="./images/6.png" data-src="./images/placeholder.png" />
+    <img class="img lazyload" src="./images/7.png" data-src="./images/placeholder.png" /> -->
+  </div>
+  <!-- <script src="../../js/lazyload.min.js"></script> -->
+  <script src="./js/index.js"></script>
+  <script>
+    var images = document.getElementsByTagName('img');
+    var ratio = 3
+    if (window.devicePixelRatio){
+      var ratio = Math.ceil(window.devicePixelRatio);
+      if (ratio>3) {
+        ratio = 3 ;
+      } else if (ratio < 1 ) {
+        ratio = 1 ;
+      }
+    }
+    if (ratio==1){
+      if (document.body.clientWidth > 500){
+        ratio = 3
+      }
+    }
+    
+
+    for (var i = 0; i < images.length; i++) {
+      if (images[i].dataset.src) {
+        var src = images[i].dataset.src;
+        var imageName = src.substring(src.lastIndexOf('/')+1,src.length);
+        var newName = imageName.split('.')[0]+'@' + ratio + 'x.' + imageName.split('.')[1]
+        images[i].src = src.replace(imageName,newName)
+      }
+    }
+  </script>
+</body>
+
+</html>

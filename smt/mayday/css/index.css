@@ -1,0 +1,107 @@
+html,html body {
+    font-family: 'PingFangSC-Regular;', 'Microsoft Yahei', sans-serif, Arial, 'Simsun' ;
+    margin: 0;
+    font-size: 16px;
+    height: 100%;
+    width: auto;
+    min-height: 100%;
+    color: #666;
+    /* background-color: #f2fa6f8; */
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    overflow-x: hidden;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;    // 解决卡顿
+  }
+  
+  body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p, sup, sub {
+    margin: 0;
+    padding: 0
+  }
+  a{
+      text-decoration: none;
+  }
+
+
+@keyframes arrowUpDown {
+    0% {
+        bottom:0.5%;
+    }
+    50%{
+        bottom:4%;
+    }
+    100%{
+        bottom:0.5%;
+    }
+}
+@-webkit-keyframes arrowUpDown {
+    0% {
+        bottom:0.5%;
+    }
+    50%{
+        bottom:4%;
+    }
+    100%{
+        bottom:0.5%;
+    }
+}
+@-moz-keyframes arrowUpDown {
+    0% {
+        bottom:0.5%;
+    }
+    50%{
+        bottom:4%;
+    }
+    100%{
+        bottom:0.5%;
+    }
+}
+@-o-keyframes arrowUpDown {
+    0% {
+        bottom:0.5%;
+    }
+    50%{
+        bottom:4%;
+    }
+    100%{
+        bottom:0.5%;
+    }
+}
+
+.img-list {
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+}
+
+.img-list .img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#btn{
+    display: inline-block;
+    width: 85%;
+    height: 12%;
+    position: absolute;
+    top: 80%;
+    left: 7.5%;
+}
+.bg{
+    background: url(../images/btn@3x.png) no-repeat center/100%
+}
+.matte{
+  display: none;  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.40);
+  z-index: 1;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.matte img{
+  width: 100%;
+}
