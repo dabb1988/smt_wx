@@ -49,9 +49,9 @@
         }
     });
     wx.onMenuShareTimeline({
-        title: title+"；"+desc, // 分享标题
-        link: link, // 分享链接
-        imgUrl: imgUrl, // 分享图标
+        title: _title+"；"+_desc, // 分享标题
+        link: _link, // 分享链接
+        imgUrl: _imgUrl, // 分享图标
         success: function() {
             // 用户确认分享后执行的回调函数
         },

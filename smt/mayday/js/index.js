@@ -2,6 +2,12 @@
   if('serviceWorker' in navigator) {
     // navigator.serviceWorker.register('/smt/activitys/expermysz/sw.js');
   };
+  // 微信分享
+  var ua = navigator.userAgent.toLowerCase();
+  if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+    WX_CONFIG.wxShare('诚信，深圳更出彩', '大鹏预约绿色通行', window.location.href, window.location.origin + '/smt/images/common/logo_small.png')
+  }
+  // 下载
   var oMatte = document.getElementById('downloadMatte');
   var u = navigator.userAgent;
   var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); // ios终端
