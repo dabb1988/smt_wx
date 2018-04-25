@@ -7,7 +7,8 @@
   var WX_CONFIG = {}
 
   WX_CONFIG.initWxConfig = function (_href, _jsApiList) {
-    var _url =  'https://pamap-gr.pingan.com.cn/do/wx/generateJSSDKConfig'
+    // var _url =  'https://pamap-gr.pingan.com.cn/do/wx/generateJSSDKConfig'
+    var _url =  '/jsapi/do/wx/generateJSSDKConfig'
     var XHR = new XMLHttpRequest()
     XHR.open('POST', _url, false)
     XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
@@ -19,7 +20,7 @@
             var res = JSON.parse(XHR.responseText);
             if (res && res.resultCode && "0" === res.resultCode) {
                 var result = eval('(' + res.result + ')');
-                result.debug = true
+                // result.debug = true
                 wx.config(result);
             }
           } catch (e) {
@@ -32,6 +33,7 @@
   }
 
   WX_CONFIG.wxShare = function (_title, _desc, _link, _imgUrl) {
+  	_imgUrl = "https://smt-web.pingan.com.cn/smt/images/common/logo_small.png"
     this.initWxConfig(_link, ["onMenuShareAppMessage", "onMenuShareTimeline"])
     wx.ready(function() {
     console.log('初始化成功')

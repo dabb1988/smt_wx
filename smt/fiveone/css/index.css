@@ -84,7 +84,7 @@ html,html body {
     top: 51%;
     left: 10%;
 }
-#small_logo{
+#small_logo {
     display: inline-block;
     width: 6%;
     height: 12%;
@@ -92,4 +92,16 @@ html,html body {
     top: 67.6%;
     left: 20.5%;
     background: url(/smt/images/common/logo_small.png) no-repeat center/100%
+}
+#btn{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    display: inline-block;
+    width: 70%;
+    height: 36%;
+    background: url(../images/btn_confirm@3x.png) no-repeat center/100%
+}
+#btn.btn-click {
+    background: url(../images/btn_confirm_click@3x.png) no-repeat center/100%;
 }
